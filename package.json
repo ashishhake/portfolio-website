@@ -1,0 +1,13 @@
+{
+  "name": "static-site",
+  "scripts": {
+    "test": "html-validate site/**/*.html",
+    "lint:css": "stylelint site/css/*.css",
+    "serve": "npx serve site"
+  },
+  "devDependencies": {
+    "html-validate": "^8.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}
