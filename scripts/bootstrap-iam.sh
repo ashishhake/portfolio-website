@@ -2,10 +2,10 @@
 set -e
 
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-GITHUB_ORG="your-github-username"
-GITHUB_REPO="your-repo-name"
+GITHUB_ORG="ashishhake"
+GITHUB_REPO="portfolio-website"
 ROLE_NAME="github-actions-deploy-role"
-S3_BUCKET_NAME="your-bucket-name"
+S3_BUCKET_NAME="static-web-host-ash-2026"
 
 echo "Creating OIDC provider..."
 aws iam create-open-id-connect-provider \
