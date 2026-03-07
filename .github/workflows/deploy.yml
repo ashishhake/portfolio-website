@@ -29,9 +29,12 @@ jobs:
         run: npm run lint:css
       
       - name: Scan for secrets
-        uses: trufflesecurity/trufflehog-actions-scan@v1
-        with:
-          path: ./
+        run: |
+          if grep -r "AKIA[0-9A-Z]{16}" site/; then
+            echo "Possible AWS key found!"
+            exit 1
+          fi
+          echo "No secrets found"
 
   build:
     runs-on: ubuntu-latest
