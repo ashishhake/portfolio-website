@@ -5,7 +5,7 @@ variable "default_aws_region" {
 variable "bucket_name" {
     type = string
     description = "S3 bucket name for static site"
-    default     = "static-web-host"  
+    default     = "static-web-host-ash-2026"  
 }
 
 variable "bucket_id" {
