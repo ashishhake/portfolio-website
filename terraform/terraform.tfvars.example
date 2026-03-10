@@ -1,2 +1,2 @@
-default_aws_region = "ap-south-1"
-bucket_name        = "static-web-host-yourname-2024"
+default_aws_region = "region_name ex. ap-south-1"
+bucket_name        = "your-bucket-name"

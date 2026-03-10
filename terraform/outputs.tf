@@ -1,7 +1,11 @@
-output "CloudFront_distribution_ID" {
-    value = aws_cloudfront_distribution.CDN.id
+output "s3_bucket_name" {
+  value = aws_s3_bucket.static_web_bucket.id
 }
 
-output "s3_bucket_name" {
-    value = aws_s3_bucket.static-web-bucket.bucket
+output "cloudfront_distribution_id" {
+  value = aws_cloudfront_distribution.portfolio_website.id
+}
+
+output "cloudfront_domain_name" {
+  value = aws_cloudfront_distribution.portfolio_website.domain_name
 }
