@@ -1,58 +1,47 @@
-#!/bin/bash
-set -e
+# #!/bin/bash
+# set -e
 
-AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-GITHUB_ORG="ashishhake"
-GITHUB_REPO="portfolio-website"
-ROLE_NAME="github-actions-deploy-role"
-S3_BUCKET_NAME="static-web-host-ash-2026"
+# AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+# GITHUB_REPO="ashishhake/portfolio-site"
+# AWS_REGION="ap-south-1"
+# ROLE_NAME="github-actions-deploy-role"
+# POLICY_NAME="github-actions-deploy-policy"
 
-echo "Creating OIDC provider..."
-aws iam create-open-id-connect-provider \
-  --url https://token.actions.githubusercontent.com \
-  --client-id-list sts.amazonaws.com \
-  --thumbprint-list 6938fd4d98bab03faadb97b34396831e3780aea1
+# echo "Creating GitHub OIDC provider (if not exists)..."
 
-echo "Creating IAM role..."
-aws iam create-role \
-  --role-name $ROLE_NAME \
-  --assume-role-policy-document '{
-    "Version": "2012-10-17",
-    "Statement": [{
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "arn:aws:iam::'"$AWS_ACCOUNT_ID"':oidc-provider/token.actions.githubusercontent.com"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "token.actions.githubusercontent.com:sub": "repo:'"$GITHUB_ORG"'/'"$GITHUB_REPO"':ref:refs/heads/main"
-        }
-      }
-    }]
-  }'
+# aws iam create-open-id-connect-provider \
+#   --url https://token.actions.githubusercontent.com \
+#   --client-id-list sts.amazonaws.com \
+#   2>/dev/null || echo "OIDC provider already exists"
 
-echo "Attaching policy..."
-aws iam put-role-policy \
-  --role-name $ROLE_NAME \
-  --policy-name "deploy-policy" \
-  --policy-document '{
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Effect": "Allow",
-        "Action": ["s3:PutObject", "s3:DeleteObject", "s3:ListBucket"],
-        "Resource": [
-          "arn:aws:s3:::'"$S3_BUCKET_NAME"'",
-          "arn:aws:s3:::'"$S3_BUCKET_NAME"'/*"
-        ]
-      },
-      {
-        "Effect": "Allow",
-        "Action": "cloudfront:CreateInvalidation",
-        "Resource": "*"
-      }
-    ]
-  }'
+# echo "Updating trust policy with account and repo..."
 
-echo "Done! Role ARN: arn:aws:iam::$AWS_ACCOUNT_ID:role/$ROLE_NAME"
+# sed "s/ACCOUNT_ID/$AWS_ACCOUNT_ID/g; s|GITHUB_REPO|$GITHUB_REPO|g" \
+#   iam-trust-policy.json > trust-policy.json
+
+# echo "Creating IAM role..."
+
+# aws iam create-role \
+#   --role-name $ROLE_NAME \
+#   --assume-role-policy-document file://iam-trust-policy.json \
+#   2>/dev/null || echo "Role already exists"
+
+# echo "Creating IAM policy..."
+
+# aws iam create-policy \
+#   --policy-name $POLICY_NAME \
+#   --policy-document file://iam-deploy-policy.json \
+#   2>/dev/null || echo "Policy may already exist"
+
+# echo "Attaching policy to role..."
+
+# aws iam attach-role-policy \
+#   --role-name $ROLE_NAME \
+#   --policy-arn arn:aws:iam::$AWS_ACCOUNT_ID:policy/$POLICY_NAME
+
+# echo ""
+# echo "======================================"
+# echo "Add this to GitHub Secrets:"
+# echo ""
+# echo "AWS_ROLE_ARN=arn:aws:iam::$AWS_ACCOUNT_ID:role/$ROLE_NAME"
+# echo "======================================"
