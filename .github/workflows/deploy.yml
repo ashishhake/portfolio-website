@@ -3,30 +3,31 @@ name: deploy to aws
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
+
   validate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
-      
-      - name: setup node.js
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
-      
+
       - name: Validate HTML
         run: npm run test
-      
-      - name: CSS lint
+
+      - name: Lint CSS
         run: npm run lint:css
-      
+
       - name: Scan for secrets
         run: |
           if grep -r "AKIA[0-9A-Z]{16}" site/; then
@@ -42,27 +43,37 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
-      - name: Copy site/ to dist/
-        run: cp -r site/ dist/
-  
+
+      - name: Build site
+        run: |
+          mkdir -p dist
+          cp -r site/* dist/
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: dist
+
   test:
     runs-on: ubuntu-latest
     needs: build
 
     steps:
-      - name: checkout code
-        uses: actions/checkout@v4
-      
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: dist
+
       - name: Check required files exist
         run: |
-          test -f site/index.html
-          test -f site/404.html
+          test -f dist/index.html
+          test -f dist/404.html
 
       - name: Check file sizes
         run: |
-          find site/ -size +1M -exec echo "Too large: {}" \;
-
+          find dist/ -size +1M -exec echo "Too large: {}" \;
 
   deploy:
     runs-on: ubuntu-latest
@@ -73,8 +84,11 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: dist
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -85,9 +99,9 @@ jobs:
 
       - name: Sync to S3
         run: |
-          aws s3 sync site/ s3://${{ vars.S3_BUCKET_NAME }} --delete
+          aws s3 sync dist/ s3://${{ vars.S3_BUCKET_NAME }} --delete
 
-      - name: Invalidate CloudFront
+      - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
             --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} \
