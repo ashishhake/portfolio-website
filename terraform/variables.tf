@@ -4,6 +4,6 @@ variable "default_aws_region" {
 }
 
 variable "bucket_name" {
-    type = string
-    description = "S3 bucket name for static site"
+  type        = string
+  description = "S3 bucket name for static site"
 }
