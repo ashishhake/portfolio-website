@@ -33,8 +33,8 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+    linear-gradient(rgb(0 212 255 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(0 212 255 / 3%) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
@@ -52,7 +52,7 @@ body::before {
 header {
   padding: 60px 0 40px;
   text-align: center;
-  animation: fadeDown 0.8s ease both;
+  animation: fade-down 0.8s ease both;
 }
 
 .badge {
@@ -93,7 +93,7 @@ h1 span {
   gap: 40px;
   margin: 40px 0;
   flex-wrap: wrap;
-  animation: fadeUp 0.8s 0.2s ease both;
+  animation: fade-up 0.8s 0.2s ease both;
 }
 
 .stat {
@@ -122,7 +122,7 @@ h1 span {
   justify-content: center;
   margin-bottom: 40px;
   flex-wrap: wrap;
-  animation: fadeUp 0.8s 0.3s ease both;
+  animation: fade-up 0.8s 0.3s ease both;
 }
 
 .tab {
@@ -165,7 +165,7 @@ h1 span {
   transition: all 0.25s;
   position: relative;
   overflow: hidden;
-  animation: fadeUp 0.6s ease both;
+  animation: fade-up 0.6s ease both;
 }
 
 .project-card::before {
@@ -189,7 +189,7 @@ h1 span {
   border-color: var(--card-accent, var(--accent));
   transform: translateY(-3px);
   background: var(--surface2);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 40%);
 }
 
 .card-header {
@@ -252,8 +252,8 @@ h1 span {
   font-family: 'Space Mono', monospace;
   font-size: 10px;
   padding: 3px 8px;
-  background: rgba(0,212,255,0.07);
-  border: 1px solid rgba(0,212,255,0.15);
+  background: rgb(0 212 255 / 7%);
+  border: 1px solid rgb(0 212 255 / 15%);
   color: var(--accent);
   letter-spacing: 0.5px;
 }
@@ -335,7 +335,7 @@ h1 span {
 }
 
 .resume-line {
-  background: rgba(240,180,41,0.08);
+  background: rgb(240 180 41 / 8%);
   border-left: 2px solid var(--gold);
   padding: 10px 14px;
   font-size: 12px;
@@ -351,7 +351,7 @@ h1 span {
   border: 1px solid var(--border);
   padding: 28px;
   margin-bottom: 40px;
-  animation: fadeUp 0.6s 0.4s ease both;
+  animation: fade-up 0.6s 0.4s ease both;
 }
 
 .progress-title {
@@ -449,7 +449,7 @@ h1 span {
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
   margin-bottom: 60px;
-  animation: fadeUp 0.6s 0.5s ease both;
+  animation: fade-up 0.6s 0.5s ease both;
 }
 
 .cert-card {
@@ -494,7 +494,7 @@ footer {
   letter-spacing: 1px;
 }
 
-@keyframes fadeDown {
+@keyframes fade-down {
   from {
     opacity: 0;
     transform: translateY(-20px);
@@ -506,7 +506,7 @@ footer {
   }
 }
 
-@keyframes fadeUp {
+@keyframes fade-up {
   from {
     opacity: 0;
     transform: translateY(20px);
