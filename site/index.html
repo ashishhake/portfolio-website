@@ -1,11 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Test for CI/CD Pipeline</title>
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS Portfolio Roadmap 2026</title>
+<link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <h1>I will work on it further</h1>
+
+<div class="container">
+  <header>
+    <div class="badge">// AWS Portfolio Roadmap 2026</div>
+    <h1>Build. Deploy.<br><span>Get Hired.</span></h1>
+    <p class="subtitle">Cloud Architect + DevOps Track · Starting from Basics</p>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">Projects</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Phases</div></div>
+    <div class="stat"><div class="stat-num">~6mo</div><div class="stat-label">Timeline</div></div>
+    <div class="stat"><div class="stat-num">15+</div><div class="stat-label">AWS Services</div></div>
+  </div>
+
+  <!-- Progress tracker -->
+  <div class="progress-section">
+    <div class="progress-title">// Skills You'll Build</div>
+    <div class="progress-items" id="skillBars">
+      <div class="progress-item">
+        <div class="progress-name">Infrastructure as Code</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90" style="--bar-color: #00d4ff"></div></div>
+        <div class="progress-pct">90%</div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-name">CI/CD Pipelines</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85" style="--bar-color: #00ff9d"></div></div>
+        <div class="progress-pct">85%</div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-name">Containerization</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="80" style="--bar-color: #ff6b35"></div></div>
+        <div class="progress-pct">80%</div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-name">Serverless Architecture</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="75" style="--bar-color: #f0b429"></div></div>
+        <div class="progress-pct">75%</div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-name">Networking & Security</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85" style="--bar-color: #a78bfa"></div></div>
+        <div class="progress-pct">85%</div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-name">Monitoring & Observability</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="70" style="--bar-color: #00d4ff"></div></div>
+        <div class="progress-pct">70%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" onclick="filterPhase('all')">All Projects</button>
+    <button class="tab" onclick="filterPhase('phase1')">Phase 1 · Foundation</button>
+    <button class="tab" onclick="filterPhase('phase2')">Phase 2 · Intermediate</button>
+    <button class="tab" onclick="filterPhase('phase3')">Phase 3 · Capstone</button>
+  </div>
+
+  <p class="section-title">// Click any project to expand details + resume bullets</p>
+
+  <!-- Projects -->
+  <div class="projects" id="projectGrid">
+
+    <!-- P1: Static Site + CI/CD -->
+    <div class="project-card" data-phase="phase1" style="--card-accent: #00d4ff" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="phase-tag">Phase 1</span>
+        <div class="difficulty"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
+      </div>
+      <div class="project-title">Static Site with Automated CI/CD Pipeline</div>
+      <div class="project-desc">Deploy a portfolio/blog site using S3 + CloudFront with GitHub Actions for auto-deployment on every push.</div>
+      <div class="services">
+        <span class="service-tag">S3</span>
+        <span class="service-tag">CloudFront</span>
+        <span class="service-tag">Route 53</span>
+        <span class="service-tag">ACM</span>
+        <span class="service-tag">GitHub Actions</span>
+      </div>
+      <div class="card-footer">
+        <span class="time-est">⏱ 1–2 weeks</span>
+        <span class="expand-btn">Details</span>
+      </div>
+      <div class="project-details">
+        <div class="detail-section">
+          <div class="detail-label">What You'll Build</div>
+          <ul class="detail-list">
+            <li>S3 bucket configured as static website host with proper bucket policies</li>
+            <li>CloudFront distribution with HTTPS via ACM certificate</li>
+            <li>Custom domain with Route 53 hosted zone + DNS records</li>
+            <li>GitHub Actions workflow: build → test → invalidate cache → deploy</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">Why Hiring Managers Love This</div>
+          <ul class="detail-list">
+            <li>Shows you know the full web hosting stack, not just "upload to S3"</li>
+            <li>CI/CD is table stakes for every DevOps role in 2026</li>
+            <li>Demonstrates cost-awareness (S3+CF is near-zero cost)</li>
+          </ul>
+        </div>
+        <div class="detail-label">📄 Resume Bullet</div>
+        <div class="resume-line">Architected and deployed a globally distributed static site using AWS S3 + CloudFront with automated CI/CD via GitHub Actions, reducing deployment time by 90% and achieving 99.9% uptime with SSL/TLS termination via ACM.</div>
+      </div>
+    </div>
+
+    <!-- P1: Serverless REST API -->
+    <div class="project-card" data-phase="phase1" style="--card-accent: #00ff9d" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="phase-tag">Phase 1</span>
+        <div class="difficulty"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
+      </div>
+      <div class="project-title">Serverless REST API with Authentication</div>
+      <div class="project-desc">Build a fully serverless backend — a task manager or URL shortener — with user auth using Cognito.</div>
+      <div class="services">
+        <span class="service-tag">Lambda</span>
+        <span class="service-tag">API Gateway</span>
+        <span class="service-tag">DynamoDB</span>
+        <span class="service-tag">Cognito</span>
+        <span class="service-tag">CloudWatch</span>
+      </div>
+      <div class="card-footer">
+        <span class="time-est">⏱ 2–3 weeks</span>
+        <span class="expand-btn">Details</span>
+      </div>
+      <div class="project-details">
+        <div class="detail-section">
+          <div class="detail-label">What You'll Build</div>
+          <ul class="detail-list">
+            <li>REST API endpoints (GET/POST/PUT/DELETE) via API Gateway + Lambda</li>
+            <li>DynamoDB table with proper partition/sort key design</li>
+            <li>Cognito User Pool for signup/login + JWT-protected endpoints</li>
+            <li>CloudWatch dashboards + Lambda error alarms</li>
+            <li>Deploy everything with AWS SAM or Serverless Framework</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">Why Hiring Managers Love This</div>
+          <ul class="detail-list">
+            <li>Serverless is the dominant pattern for new backend workloads</li>
+            <li>Shows understanding of stateless compute + NoSQL design</li>
+            <li>Auth is a real-world requirement — Cognito knowledge is valued</li>
+          </ul>
+        </div>
+        <div class="detail-label">📄 Resume Bullet</div>
+        <div class="resume-line">Designed and deployed a serverless REST API (Lambda + API Gateway + DynamoDB) with Cognito-based JWT authentication, handling 10,000+ req/day at $0 compute cost under free tier limits.</div>
+      </div>
+    </div>
+
+    <!-- P2: IaC with Terraform -->
+    <div class="project-card" data-phase="phase2" style="--card-accent: #ff6b35" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="phase-tag">Phase 2</span>
+        <div class="difficulty"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div>
+      </div>
+      <div class="project-title">Multi-Environment Infrastructure with Terraform</div>
+      <div class="project-desc">Provision a full 3-tier VPC architecture (dev/staging/prod) using Terraform modules with remote state.</div>
+      <div class="services">
+        <span class="service-tag">Terraform</span>
+        <span class="service-tag">VPC</span>
+        <span class="service-tag">EC2</span>
+        <span class="service-tag">RDS</span>
+        <span class="service-tag">ALB</span>
+        <span class="service-tag">S3 Remote State</span>
+      </div>
+      <div class="card-footer">
+        <span class="time-est">⏱ 2–3 weeks</span>
+        <span class="expand-btn">Details</span>
+      </div>
+      <div class="project-details">
+        <div class="detail-section">
+          <div class="detail-label">What You'll Build</div>
+          <ul class="detail-list">
+            <li>VPC with public/private subnets across 2 AZs, NAT Gateway, IGW</li>
+            <li>Reusable Terraform modules for VPC, EC2, RDS</li>
+            <li>Terraform workspaces OR separate tfvars for dev/staging/prod</li>
+            <li>Remote state in S3 with DynamoDB state locking</li>
+            <li>Application Load Balancer with target groups + health checks</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">Why Hiring Managers Love This</div>
+          <ul class="detail-list">
+            <li>Terraform is the #1 IaC tool — required in nearly every job description</li>
+            <li>Multi-env shows you understand real-world software delivery</li>
+            <li>VPC networking is the most-tested topic in cloud interviews</li>
+          </ul>
+        </div>
+        <div class="detail-label">📄 Resume Bullet</div>
+        <div class="resume-line">Engineered multi-environment AWS infrastructure (dev/staging/prod) using Terraform modules, provisioning VPCs, EC2 auto-scaling groups, RDS, and ALBs with remote state management — reducing provisioning time from days to under 10 minutes.</div>
+      </div>
+    </div>
+
+    <!-- P2: Containerized App on ECS -->
+    <div class="project-card" data-phase="phase2" style="--card-accent: #a78bfa" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="phase-tag">Phase 2</span>
+        <div class="difficulty"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div>
+      </div>
+      <div class="project-title">Containerized Microservice on ECS Fargate</div>
+      <div class="project-desc">Dockerize an app and deploy it on ECS Fargate with ECR, auto-scaling, and a full CI/CD pipeline.</div>
+      <div class="services">
+        <span class="service-tag">ECS Fargate</span>
+        <span class="service-tag">ECR</span>
+        <span class="service-tag">Docker</span>
+        <span class="service-tag">CodePipeline</span>
+        <span class="service-tag">CodeBuild</span>
+        <span class="service-tag">ALB</span>
+      </div>
+      <div class="card-footer">
+        <span class="time-est">⏱ 3 weeks</span>
+        <span class="expand-btn">Details</span>
+      </div>
+      <div class="project-details">
+        <div class="detail-section">
+          <div class="detail-label">What You'll Build</div>
+          <ul class="detail-list">
+            <li>Dockerfile + multi-stage build for a Node/Python/Go microservice</li>
+            <li>ECR repository with image scanning enabled</li>
+            <li>ECS Fargate task definition + service with rolling deployments</li>
+            <li>AWS CodePipeline: source → build → push to ECR → deploy to ECS</li>
+            <li>Auto-scaling policies based on CPU/memory metrics</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">Why Hiring Managers Love This</div>
+          <ul class="detail-list">
+            <li>Containers are universal — ECS + Fargate is the managed path on AWS</li>
+            <li>Shows full DevOps loop: code → container → deploy → scale</li>
+            <li>ECR + CodePipeline = native AWS CI/CD, highly valued</li>
+          </ul>
+        </div>
+        <div class="detail-label">📄 Resume Bullet</div>
+        <div class="resume-line">Containerized and deployed a microservice to AWS ECS Fargate via an automated CodePipeline CI/CD workflow (ECR → ECS rolling deploy), with auto-scaling achieving sub-60s scale-out under load.</div>
+      </div>
+    </div>
+
+    <!-- P2: Monitoring & Alerting -->
+    <div class="project-card" data-phase="phase2" style="--card-accent: #f0b429" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="phase-tag">Phase 2</span>
+        <div class="difficulty"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div>
+      </div>
+      <div class="project-title">Centralized Observability Platform</div>
+      <div class="project-desc">Build a full monitoring stack: custom metrics, dashboards, log aggregation, and alerting with runbooks.</div>
+      <div class="services">
+        <span class="service-tag">CloudWatch</span>
+        <span class="service-tag">CloudTrail</span>
+        <span class="service-tag">SNS</span>
+        <span class="service-tag">EventBridge</span>
+        <span class="service-tag">Grafana</span>
+      </div>
+      <div class="card-footer">
+        <span class="time-est">⏱ 2 weeks</span>
+        <span class="expand-btn">Details</span>
+      </div>
+      <div class="project-details">
+        <div class="detail-section">
+          <div class="detail-label">What You'll Build</div>
+          <ul class="detail-list">
+            <li>CloudWatch custom metrics + composite alarms with SNS alerts</li>
+            <li>Log Insights queries for error pattern detection</li>
+            <li>CloudTrail + EventBridge rule to alert on root account usage</li>
+            <li>Grafana dashboard connected to CloudWatch data source</li>
+            <li>Documented runbook for each alert (what to do when it fires)</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">Why Hiring Managers Love This</div>
+          <ul class="detail-list">
+            <li>Observability is a senior-level concern — shows production maturity</li>
+            <li>Runbooks signal you think about on-call, not just deployment</li>
+            <li>Grafana is universal — cross-cloud skill</li>
+          </ul>
+        </div>
+        <div class="detail-label">📄 Resume Bullet</div>
+        <div class="resume-line">Built centralized observability platform using CloudWatch, CloudTrail, and Grafana with composite alarms, automated SNS alerting, and documented incident runbooks — reducing MTTD by ~40%.</div>
+      </div>
+    </div>
+
+    <!-- P3: Event-Driven Architecture -->
+    <div class="project-card" data-phase="phase3" style="--card-accent: #00ff9d" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="phase-tag">Phase 3 · Capstone</span>
+        <div class="difficulty"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+      </div>
+      <div class="project-title">Event-Driven Order Processing System</div>
+      <div class="project-desc">Build a decoupled, resilient order-processing pipeline using SQS, SNS, Lambda, and Step Functions.</div>
+      <div class="services">
+        <span class="service-tag">SQS</span>
+        <span class="service-tag">SNS</span>
+        <span class="service-tag">Step Functions</span>
+        <span class="service-tag">Lambda</span>
+        <span class="service-tag">DynamoDB</span>
+        <span class="service-tag">EventBridge</span>
+      </div>
+      <div class="card-footer">
+        <span class="time-est">⏱ 3–4 weeks</span>
+        <span class="expand-btn">Details</span>
+      </div>
+      <div class="project-details">
+        <div class="detail-section">
+          <div class="detail-label">What You'll Build</div>
+          <ul class="detail-list">
+            <li>SNS fan-out to multiple SQS queues (orders, notifications, analytics)</li>
+            <li>Step Functions workflow: validate → process payment → update inventory → notify</li>
+            <li>Dead Letter Queue (DLQ) for failed message handling + retry logic</li>
+            <li>DynamoDB Streams triggering downstream Lambda functions</li>
+            <li>EventBridge scheduled rules for batch reconciliation jobs</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">Why Hiring Managers Love This</div>
+          <ul class="detail-list">
+            <li>Event-driven = the dominant architecture pattern for scalable systems</li>
+            <li>Step Functions shows workflow orchestration — rare and valued skill</li>
+            <li>DLQ + retry shows you design for failure, not just happy paths</li>
+          </ul>
+        </div>
+        <div class="detail-label">📄 Resume Bullet</div>
+        <div class="resume-line">Architected an event-driven order processing system using SNS/SQS fan-out, AWS Step Functions for workflow orchestration, and DLQ-based fault tolerance — processing 50,000+ events/day with zero data loss.</div>
+      </div>
+    </div>
+
+    <!-- P3: Multi-Account Platform -->
+    <div class="project-card" data-phase="phase3" style="--card-accent: #ff6b35" onclick="toggleCard(this)">
+      <div class="card-header">
+        <span class="phase-tag">Phase 3 · Capstone</span>
+        <div class="difficulty"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+      </div>
+      <div class="project-title">Multi-Account AWS Landing Zone</div>
+      <div class="project-desc">Set up AWS Organizations with Control Tower, SCPs, centralized logging, and a secure baseline across accounts.</div>
+      <div class="services">
+        <span class="service-tag">AWS Organizations</span>
+        <span class="service-tag">Control Tower</span>
+        <span class="service-tag">SCPs</span>
+        <span class="service-tag">Config</span>
+        <span class="service-tag">Security Hub</span>
+        <span class="service-tag">GuardDuty</span>
+      </div>
+      <div class="card-footer">
+        <span class="time-est">⏱ 3–4 weeks</span>
+        <span class="expand-btn">Details</span>
+      </div>
+      <div class="project-details">
+        <div class="detail-section">
+          <div class="detail-label">What You'll Build</div>
+          <ul class="detail-list">
+            <li>AWS Organizations with OU structure: Root → Prod / Dev / Security</li>
+            <li>Service Control Policies (SCPs) blocking unsafe actions org-wide</li>
+            <li>Centralized CloudTrail + Config aggregator in a logging account</li>
+            <li>GuardDuty + Security Hub enabled across all accounts</li>
+            <li>Account vending automation using Terraform + Control Tower</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">Why Hiring Managers Love This</div>
+          <ul class="detail-list">
+            <li>Every enterprise runs multi-account AWS — this is senior-level territory</li>
+            <li>SCPs + Control Tower = cloud governance knowledge that's hard to find</li>
+            <li>Security Hub shows security posture awareness — rare in candidates</li>
+          </ul>
+        </div>
+        <div class="detail-label">📄 Resume Bullet</div>
+        <div class="resume-line">Designed and implemented a multi-account AWS Landing Zone using Organizations + Control Tower with SCP guardrails, centralized logging, and automated GuardDuty/Security Hub across 5 accounts — establishing enterprise-grade governance baseline.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Certifications -->
+  <p class="section-title">// Pair With These Certifications</p>
+  <div class="certs-row">
+    <div class="cert-card">
+      <div class="cert-icon">☁️</div>
+      <div class="cert-name">AWS Solutions Architect Associate</div>
+      <div class="cert-timing">Start Month 1–2</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🔧</div>
+      <div class="cert-name">AWS SysOps Administrator</div>
+      <div class="cert-timing">After Phase 2</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🏗️</div>
+      <div class="cert-name">HashiCorp Terraform Associate</div>
+      <div class="cert-timing">After Project 3</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🚀</div>
+      <div class="cert-name">AWS DevOps Engineer Pro</div>
+      <div class="cert-timing">End of Phase 3</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    AWS Portfolio Roadmap 2026 · Cloud Architect + DevOps Track · Built for Humans, Not Robots
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
 </body>
-</html>< trigger -->
+</html>
