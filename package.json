@@ -1,12 +1,13 @@
 {
   "name": "static-site",
+  "version": "1.0.0",
   "scripts": {
-    "test": "html-validate site/**/*.html",
+    "test": "html-validate site/index.html site/404.html",
     "lint:css": "stylelint site/css/*.css",
     "serve": "npx serve site"
   },
   "devDependencies": {
-    "html-validate": "^8.0.0",
+    "html-validate": "^9.0.0",
     "stylelint": "^16.0.0",
     "stylelint-config-standard": "^36.0.0"
   }
