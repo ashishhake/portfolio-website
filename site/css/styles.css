@@ -361,6 +361,21 @@ h1 span { color: var(--accent); }
   transition: width 1.2s cubic-bezier(0.16,1,0.3,1);
 }
 
+/* Bar color variants */
+.bar-color-1 { --bar-color: #00d4ff; }
+.bar-color-2 { --bar-color: #00ff9d; }
+.bar-color-3 { --bar-color: #ff6b35; }
+.bar-color-4 { --bar-color: #f0b429; }
+.bar-color-5 { --bar-color: #a78bfa; }
+.bar-color-6 { --bar-color: #00d4ff; }
+
+/* Card accent variants */
+.card-accent-1 { --card-accent: #00d4ff; }
+.card-accent-2 { --card-accent: #00ff9d; }
+.card-accent-3 { --card-accent: #ff6b35; }
+.card-accent-4 { --card-accent: #a78bfa; }
+.card-accent-5 { --card-accent: #f0b429; }
+
 .progress-pct {
   font-family: 'Space Mono', monospace;
   font-size: 11px;
