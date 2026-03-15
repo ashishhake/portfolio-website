@@ -1,63 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 – Page Not Found</title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <style>
-    .error-page {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      gap: 16px;
-    }
-    .error-code {
-      font-family: 'Space Mono', monospace;
-      font-size: clamp(4rem, 15vw, 8rem);
-      font-weight: 700;
-      color: var(--accent);
-      line-height: 1;
-    }
-    .error-msg {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #fff;
-    }
-    .error-sub {
-      font-family: 'Space Mono', monospace;
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: 1px;
-    }
-    .back-link {
-      display: inline-block;
-      margin-top: 24px;
-      font-family: 'Space Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 10px 24px;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .back-link:hover {
-      background: var(--accent);
-      color: var(--bg);
-    }
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 | Not Found</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b0f12;
+            color: #39ff14;
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1em;
+            background-color: #39ff14;
+            vertical-align: text-bottom;
+            animation: blink 1s step-start infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
 </head>
 <body>
-  <div class="error-page">
-    <div class="error-code">404</div>
-    <div class="error-msg">Page Not Found</div>
-    <div class="error-sub">// The resource you requested does not exist</div>
-    <a href="/" class="back-link">← Back to Home</a>
-  </div>
+    <div class="container">
+        <h1 class="text-6xl md:text-8xl font-bold mb-4">404</h1>
+        <p class="text-lg md:text-xl text-[#c9d1d9] mb-8">
+            &gt; error: route not found...<span class="cursor"></span>
+        </p>
+        <a href="index.html" class="inline-block border border-[#39ff14] text-[#39ff14] px-6 py-3 font-bold hover:bg-[#39ff14] hover:text-[#0b0f12] transition-colors">
+            return ./home
+        </a>
+    </div>
 </body>
 </html>
