@@ -3,3 +3,5 @@
 *.tfstate.backup
 *.terraform.tfvars
 *.DS_Store
+node_modules/
+dist/
