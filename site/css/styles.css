@@ -39,6 +39,7 @@ body {
             transition: opacity 0.2s, transform 0.2s;
             transform: translateY(5px);
         }
+
         .tooltip:hover .tooltip-text, .tooltip:focus-within .tooltip-text {
             visibility: visible;
             opacity: 1;
@@ -47,9 +48,6 @@ body {
 
         /* SVG Mask utility for AWS Brand Colors */
         .mask-icon {
-            -webkit-mask-size: contain;
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-position: center;
             mask-size: contain;
             mask-repeat: no-repeat;
             mask-position: center;
@@ -65,12 +63,32 @@ body {
         .init-hide {
             visibility: hidden;
         }
+
         .typing-complete .init-hide {
             visibility: visible;
-            animation: fadeIn 0.8s ease forwards;
+            animation: fade-in 0.8s ease forwards;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
+        /* AWS Icons */
+        /* stylelint-disable declaration-block-single-line-max-declarations, property-no-vendor-prefix */
+        .icon-aws { background-color: #F90; -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonaws.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonaws.svg'); }
+        .icon-iam { background-color: #DD344C; -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazoniam.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazoniam.svg'); }
+        .icon-ec2 { background-color: #D86613; -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonec2.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonec2.svg'); }
+        .icon-s3 { background-color: #3F8624; -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazons3.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazons3.svg'); }
+        .icon-lambda { background-color: #D86613; -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/awslambda.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/awslambda.svg'); }
+        .icon-apigateway { background-color: #8C4FFF; -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonapigateway.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonapigateway.svg'); }
+        .icon-cloudwatch { background-color: #E7157B; -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazoncloudwatch.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazoncloudwatch.svg'); }
+        .social-icon-filter { filter: brightness(0) invert(0.6); }
+        /* stylelint-enable declaration-block-single-line-max-declarations, property-no-vendor-prefix */

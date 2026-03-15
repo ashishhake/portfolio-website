@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ashish Hake - Cloud & DevOps Engineer Portfolio" />
-    <title>Ashish Hake | Cloud & DevOps Engineer</title>
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ashish Hake - Cloud &amp; DevOps Engineer Portfolio">
+    <title>Ashish Hake | Cloud &amp; DevOps Engineer</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -52,25 +52,25 @@
             <li><a href="#projects" class="text-termmuted hover:text-termgreen transition-colors">./projects</a></li>
             <li><a href="#contact" class="text-termmuted hover:text-termgreen transition-colors">./contact</a></li>
         </ul>
-        <button id="skip-btn" class="font-mono text-xs font-bold px-3 py-1.5 rounded border border-termamber text-termamber hover:bg-termamber/10 transition-colors" aria-label="Skip typing animation">Skip Intro &gt;&gt;</button>
+        <button type="button" id="skip-btn" class="font-mono text-xs font-bold px-3 py-1.5 rounded border border-termamber text-termamber hover:bg-termamber/10 transition-colors" aria-label="Skip typing animation">Skip Intro &gt;&gt;</button>
     </nav>
 </header>
 
 <main id="main-content" class="flex-1 w-full max-w-6xl mx-auto px-6 py-12">
-    
+
     <!-- Hero / Profile Section -->
     <section id="about" class="min-h-[70vh] flex flex-col justify-center scroll-mt-24">
         <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
             <!-- Text Content -->
             <div class="flex-1">
                 <div class="font-mono text-termgreen mb-4 text-sm" id="sys-init">&gt; System initialized. Loading user profile...</div>
-                
+
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-sans text-termtext mb-2 min-h-[1.5em]" id="type-name">
-                    <span id="name-text"></span><span class="cursor" id="main-cursor"></span>
+                    <span class="sr-only">Ashish Hake</span><span id="name-text" aria-hidden="true"></span><span class="cursor" id="main-cursor" aria-hidden="true"></span>
                 </h1>
-                
+
                 <div class="init-hide">
-                    <h2 class="text-xl md:text-2xl font-mono text-termamber mb-6">Cloud & DevOps Engineer</h2>
+                    <h2 class="text-xl md:text-2xl font-mono text-termamber mb-6">Cloud &amp; DevOps Engineer</h2>
                     <p class="text-termmuted text-lg leading-relaxed max-w-2xl mb-10">
                         Architecting robust, scalable, and secure cloud infrastructure. I specialize in automating continuous delivery pipelines, implementing Infrastructure as Code, and bringing resilient architectures to life in the cloud.
                     </p>
@@ -84,11 +84,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Profile Photo -->
             <div class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 shrink-0 init-hide relative">
                 <div class="absolute inset-0 border-2 border-termgreen rounded-full translate-x-3 translate-y-3 opacity-30"></div>
-                <img src="./assets/img/profile.jpg" alt="Ashish Hake profile photo" class="w-full h-full object-cover rounded-full border-2 border-termborder z-10 relative bg-termsurface" fetchpriority="high" />
+                <img src="./assets/img/profile.jpg" alt="Ashish Hake profile photo" class="w-full h-full object-cover rounded-full border-2 border-termborder z-10 relative bg-termsurface" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -100,30 +100,30 @@
                 <span class="text-termgreen mr-3">➜</span> cat skills.json
             </h2>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            
+
             <!-- Programming -->
             <div>
                 <h3 class="font-mono text-base font-bold text-termmuted mb-6 pb-2 border-b border-termborder">"programming": [</h3>
                 <div class="grid grid-cols-4 gap-4">
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/python" alt="Python logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/python" alt="Python logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">Python</span>
-                        <div class="tooltip-text absolute bottom-full mb-2 w-36 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Automation & API backends</div>
+                        <div class="tooltip-text absolute bottom-full mb-2 w-36 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Automation &amp; API backends</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/gnubash" alt="Bash logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/gnubash" alt="Bash logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs text-center leading-tight">Bash</span>
-                        <div class="tooltip-text absolute bottom-full mb-2 w-36 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Shell scripting & Sysadmin</div>
+                        <div class="tooltip-text absolute bottom-full mb-2 w-36 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Shell scripting &amp; Sysadmin</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/cplusplus" alt="C++ logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/cplusplus" alt="C++ logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">C++</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-36 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Systems programming</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">Java</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-36 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Enterprise applications</div>
                     </div>
@@ -136,17 +136,17 @@
                 <h3 class="font-mono text-base font-bold text-termmuted mb-6 pb-2 border-b border-termborder">"web_fundamentals": [</h3>
                 <div class="grid grid-cols-3 gap-4">
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/html5" alt="HTML logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/html5" alt="HTML logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">HTML</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Semantic structure</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/css" alt="CSS logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/css" alt="CSS logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">CSS</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Responsive styling</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">JavaScript</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Client-side logic</div>
                     </div>
@@ -154,14 +154,14 @@
                 <div class="font-mono text-termmuted mt-2">],</div>
             </div>
 
-            <!-- Backend & APIs -->
+            <!-- Backend &amp; APIs -->
             <div>
                 <h3 class="font-mono text-base font-bold text-termmuted mb-6 pb-2 border-b border-termborder">"backend_apis": [</h3>
                 <div class="grid grid-cols-3 gap-4">
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
                         <span class="material-symbols-outlined text-4xl text-[#0ea5e9] mb-2">api</span>
                         <span class="font-sans text-[10px] lg:text-xs text-center leading-tight">REST APIs</span>
-                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">API Design & Integration</div>
+                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">API Design &amp; Integration</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
                         <span class="material-symbols-outlined text-4xl text-[#a855f7] mb-2">http</span>
@@ -169,7 +169,7 @@
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Web Protocols</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/json" alt="JSON logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/json" alt="JSON logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">JSON</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Data payload structuring</div>
                     </div>
@@ -182,39 +182,39 @@
                 <h3 class="font-mono text-base font-bold text-termmuted mb-6 pb-2 border-b border-termborder">"cloud": [</h3>
                 <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4">
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon" style="background-color: #FF9900; mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonaws.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonaws.svg');"></div>
+                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon icon-aws"></div>
                         <span class="font-sans text-[10px] lg:text-xs">AWS</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Cloud ecosystem</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon" style="background-color: #DD344C; mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazoniam.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazoniam.svg');"></div>
+                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon icon-iam"></div>
                         <span class="font-sans text-[10px] lg:text-xs">IAM</span>
-                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Identity & Access</div>
+                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Identity &amp; Access</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon" style="background-color: #D86613; mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonec2.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonec2.svg');"></div>
+                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon icon-ec2"></div>
                         <span class="font-sans text-[10px] lg:text-xs">EC2</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Virtual computing</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon" style="background-color: #3F8624; mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazons3.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazons3.svg');"></div>
+                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon icon-s3"></div>
                         <span class="font-sans text-[10px] lg:text-xs">S3</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Object storage</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon" style="background-color: #D86613; mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/awslambda.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/awslambda.svg');"></div>
+                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon icon-lambda"></div>
                         <span class="font-sans text-[10px] lg:text-xs">Lambda</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Serverless compute</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon" style="background-color: #8C4FFF; mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonapigateway.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonapigateway.svg');"></div>
+                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon icon-apigateway"></div>
                         <span class="font-sans text-[10px] lg:text-xs text-center leading-tight">API Gateway</span>
-                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">API routing & management</div>
+                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">API routing &amp; management</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon" style="background-color: #E7157B; mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazoncloudwatch.svg'); -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazoncloudwatch.svg');"></div>
+                        <div class="w-8 h-8 lg:w-10 lg:h-10 mb-2 mask-icon icon-cloudwatch"></div>
                         <span class="font-sans text-[10px] lg:text-xs text-center leading-tight">CloudWatch</span>
-                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Monitoring & Observability</div>
+                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Monitoring &amp; Observability</div>
                     </div>
                 </div>
                 <div class="font-mono text-termmuted mt-2">],</div>
@@ -225,7 +225,7 @@
                 <h3 class="font-mono text-base font-bold text-termmuted mb-6 pb-2 border-b border-termborder">"devops": [</h3>
                 <div class="grid grid-cols-3 gap-4">
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/docker" alt="Docker logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/docker" alt="Docker logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">Docker</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Containerization</div>
                     </div>
@@ -243,29 +243,29 @@
                 <div class="font-mono text-termmuted mt-2">],</div>
             </div>
 
-            <!-- Tools & Platforms -->
+            <!-- Tools &amp; Platforms -->
             <div>
                 <h3 class="font-mono text-base font-bold text-termmuted mb-6 pb-2 border-b border-termborder">"tools_platforms": [</h3>
                 <div class="grid grid-cols-3 gap-4">
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/git" alt="Git logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/git" alt="Git logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">Git</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Version Control</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/github" alt="GitHub logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2 invert" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/github" alt="GitHub logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2 invert" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">GitHub</span>
                         <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">Source Code Management</div>
                     </div>
                     <div class="tooltip relative flex flex-col items-center justify-center p-3 bg-termsurface border border-termborder hover:border-termgreen/50 rounded-lg transition-colors cursor-default" tabindex="0">
-                        <img src="https://cdn.simpleicons.org/linux" alt="Linux logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy" />
+                        <img src="https://cdn.simpleicons.org/linux" alt="Linux logo" class="w-8 h-8 lg:w-10 lg:h-10 mb-2" loading="lazy">
                         <span class="font-sans text-[10px] lg:text-xs">Linux</span>
-                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">OS & Environment</div>
+                        <div class="tooltip-text absolute bottom-full mb-2 w-32 bg-termtext text-termbg text-xs p-2 rounded shadow-lg text-center z-10 font-sans pointer-events-none">OS &amp; Environment</div>
                     </div>
                 </div>
                 <div class="font-mono text-termmuted mt-2">]</div>
             </div>
-            
+
         </div>
     </section>
 
@@ -276,7 +276,7 @@
                 <span class="text-termgreen mr-3">➜</span> ls -la ./projects
             </h2>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Project 1 -->
             <article class="bg-termsurface border border-termborder rounded-lg overflow-hidden flex flex-col hover:border-termgreen/40 hover:shadow-[0_4px_30px_rgba(57,255,20,0.05)] transition-all group">
@@ -353,12 +353,12 @@
     <section id="contact" class="py-24 scroll-mt-24 border-t border-termborder mb-12">
         <div class="max-w-3xl mx-auto bg-termsurface border border-termborder rounded-lg p-8 md:p-12 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-32 h-32 bg-termgreen/5 rounded-bl-full pointer-events-none"></div>
-            
+
             <h2 class="font-mono text-2xl md:text-3xl font-bold text-termtext mb-2 flex items-center">
                 <span class="text-termgreen mr-3">➜</span> ./connect.sh
             </h2>
             <p class="text-termmuted mb-10">Handshake protocol ready. Awaiting your connection request.</p>
-            
+
             <div class="flex flex-col gap-6">
                 <a href="mailto:ashishhake007@gmail.com" class="flex items-center group">
                     <div class="w-12 h-12 bg-termbg border border-termborder rounded flex items-center justify-center text-termmuted group-hover:text-termgreen group-hover:border-termgreen transition-all shadow-sm">
@@ -369,10 +369,10 @@
                         <div class="text-termtext group-hover:text-termgreen transition-colors">ashishhake007@gmail.com</div>
                     </div>
                 </a>
-                
+
                 <a href="https://github.com/ashishhake" target="_blank" rel="noopener noreferrer" class="flex items-center group">
                     <div class="w-12 h-12 bg-termbg border border-termborder rounded flex items-center justify-center text-termmuted group-hover:text-termgreen group-hover:border-termgreen transition-all shadow-sm">
-                        <img src="https://cdn.simpleicons.org/github/8b949e" alt="GitHub" class="w-6 h-6 group-hover:invert-0 transition-all" style="filter: brightness(0) invert(0.6);" />
+                        <img src="https://cdn.simpleicons.org/github/8b949e" alt="GitHub" class="w-6 h-6 group-hover:invert-0 transition-all social-icon-filter">
                     </div>
                     <div class="ml-4 font-mono">
                         <div class="text-xs text-termmuted mb-1">GitHub</div>
@@ -382,14 +382,14 @@
 
                 <a href="https://www.linkedin.com/in/ashishhake/" target="_blank" rel="noopener noreferrer" class="flex items-center group">
                     <div class="w-12 h-12 bg-termbg border border-termborder rounded flex items-center justify-center text-termmuted group-hover:text-termgreen group-hover:border-termgreen transition-all shadow-sm">
-                        <img src="https://cdn.simpleicons.org/linkedin/8b949e" alt="LinkedIn" class="w-6 h-6 transition-all" style="filter: brightness(0) invert(0.6);" />
+                        <img src="https://cdn.simpleicons.org/linkedin/8b949e" alt="LinkedIn" class="w-6 h-6 transition-all social-icon-filter">
                     </div>
                     <div class="ml-4 font-mono">
                         <div class="text-xs text-termmuted mb-1">LinkedIn</div>
                         <div class="text-termtext group-hover:text-termgreen transition-colors">linkedin.com/in/ashishhake</div>
                     </div>
                 </a>
-                
+
                 <a href="./assets/Ashish_Hake_Cloud_DevOps_Resume.pdf" class="flex items-center group" download>
                     <div class="w-12 h-12 bg-termbg border border-termborder rounded flex items-center justify-center text-termmuted group-hover:text-termgreen group-hover:border-termgreen transition-all shadow-sm">
                         <span class="material-symbols-outlined">description</span>
