@@ -184,6 +184,10 @@ Add the output role ARN as a GitHub Secret named `AWS_ROLE_ARN`. Set `AWS_REGION
 
 ---
 
+> Note: `site/assets/img/profile.jpg` and `site/assets/resume.pdf` is gitignored. 
+> Manually upload your resume and photo to S3 after first deploy.
+
+---
 
 **Ashish Hake** — Cloud & DevOps Engineer
 
