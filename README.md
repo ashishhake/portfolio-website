@@ -5,7 +5,6 @@
 [![Deploy to AWS](https://img.shields.io/badge/Deploy-AWS-orange?logo=amazonaws)](https://github.com/ashishhake/portfolio-site)
 [![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-blue?logo=githubactions)](https://github.com/ashishhake/portfolio-site/actions)
 [![IaC](https://img.shields.io/badge/IaC-Terraform-purple?logo=terraform)](https://www.terraform.io/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
 
