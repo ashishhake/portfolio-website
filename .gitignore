@@ -5,3 +5,5 @@
 *.DS_Store
 node_modules/
 dist/
+site/assets/img/profile.jpg
+site/assets/Ashish_Hake_Cloud_DevOps_Resume.pdf
